@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>حب احمد ❤️</title>
+<style>
+  body {
+    background-color: #ffe6f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: #ff007f;
+    font-size: 50px;
+    text-shadow: 2px 2px #ff99cc;
+    margin-top: 50px;
+  }
+
+  .heart-container {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .heart {
+    color: red;
+    font-size: 150px;
+    font-weight: bold;
+    animation: beat 1s infinite;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
+  .love-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #ff3399;
+  }
+
+  #loveCounter {
+    font-size: 28px;
+    color: #ff0066;
+    margin-top: 30px;
+  }
+
+  .highlight {
+    background-color: #ffccf2;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px auto;
+    display: inline-block;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #ff3399;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>احمد ❤️ الحب الأبدي</h1>
+
+<!-- قلب كبير باسم احمد ونسبة الحب -->
+<div class="heart-container">
+  <span class="heart">❤️ أحمد</span>
+  <div class="love-text">100% حب منك يا أحمد 💖</div>
+</div>
+
+<!-- عدّاد الحب -->
+<div id="loveCounter"></div>
+
+<!-- كلام عن حب الفقد -->
+<p class="highlight">حتى لو كان الفقد مؤلم، حبك يا أحمد يملأ قلبي بالأمل 💕</p>
+
+<!-- زر تشغيل أغنية -->
+<button onclick="playMusic()">تشغيل أغنية تامر الجيار 🎵</button>
+
+<script>
+// عدّاد حب من 3 سنين
+const startDate = new Date("2023-02-14T00:00:00"); // بداية الحب
+function updateCounter() {
+  const now = new Date();
+  const diff = now - startDate;
+  const years = Math.floor(diff / (1000*60*60*24*365));
+  const months = Math.floor((diff % (1000*60*60*24*365)) / (1000*60*60*24*30));
+  const days = Math.floor((diff % (1000*60*60*24*30)) / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const seconds = Math.floor((diff % (1000*60)) / 1000);
+  document.getElementById("loveCounter").innerHTML = `حبنا مستمر من ${years} سنة و ${months} شهر و ${days} يوم و ${hours} ساعة و ${minutes} دقيقة و ${seconds} ثانية ❤️`;
+}
+setInterval(updateCounter, 1000);
+
+// زر تشغيل أغنية (يوتيوب قانوني)
+function playMusic() {
+  window.open("https://youtu.be/bCNp_kCSsYg", "_blank");
+}
+</script>
+
+</body>
+</html>
